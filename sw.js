@@ -1,5 +1,5 @@
 /* Uda le service worker: offline cache + reminder notifications */
-const CACHE = "udale-v6";
+const CACHE = "udale-v7";
 const ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./icon-180.png", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", e => {

@@ -96,7 +96,7 @@ button{cursor:pointer}
 /* top */
 .top{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .brand{font-weight:800;font-size:var(--s4);letter-spacing:-.02em}
-.top .lbl{border-radius:999px;box-shadow:var(--raise-sm);padding:7px 14px;color:var(--ink);font-weight:700;white-space:nowrap}
+.top .lbl{color:var(--mute);font-weight:700;white-space:nowrap}
 
 /* hero dial */
 .hero{display:flex;flex-direction:column;gap:4px;align-items:stretch}
@@ -778,7 +778,7 @@ function viewRules(){
   const mk=mkey(today()),m=S.months[mk],st=S.settings,g=S.goal;
   const capped=S.categories.filter(c=>c.cap>0).length;
   const row=(k,label,val)=>`<button class="rrow" data-act="rule" data-k="${k}"><span>${label}</span><span class="v">${val}</span></button>`;
-  let h=`<header class="top"><span class="brand">Rules</span><span class="lbl">Settings</span></header>`;
+  let h=`<header class="top"><span class="brand">Rules</span><span class="lbl">Tap a row to change it</span></header>`;
   h+=`<section class="rlist"><span class="lbl">Money</span>
     ${row("goal","Goal",g?`${esc(g.name)} · ${rs(g.saved)}/${rs(g.target)}`:"Not set")}
     ${row("month","This month",m?`${rs(dayInfo(today())?.base)} a day`:"Balance missing")}
